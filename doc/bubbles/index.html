@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bubble game made with Rxjs | rollrodrig</title>
+	<link rel="stylesheet" href="../css/fly.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Fredoka One', cursive;
+		}
+		#canvas {
+			display: block;
+			width: 100%;
+			height: 100vh;
+			background-color: #e2f4f5;
+		}
+		#score {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -150px;
+			padding-top: 10px;
+			width: 300px;
+			height: 80px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: #ffffff;
+			text-shadow: 2px 2px 6px #4a494978;
+		}
+		.start {
+			font-family: 'Fredoka One', cursive;
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top: 35%;
+			left: 50%;
+			margin-left: -150px;
+			margin-top: -30px;
+			width: 300px;
+			height: 60px;
+			border-radius: 30px;
+			text-align: center;
+			font-size: 25px;
+			border-width: 20px;
+			border-color: thistle;
+			color: #ffffff;
+			background: rgb(255,113,0);
+			background: linear-gradient(180deg, rgba(255,113,0,1) 0%, rgba(255,115,0,1) 62%, rgba(255,158,0,1) 100%);
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid #f3bd73;
+			border-top: 1px solid rgba(255,90,0,1);
+			outline: none;
+		}
+		.start:hover {
+			background: linear-gradient(180deg, rgba(255, 80, 0, 1) 0%, rgba(255, 105, 0, 1) 62%, rgba(255,158,0,1) 100%);
+		}
+		.start:active {
+			background: linear-gradient(180deg, rgba(255, 60, 0, 1) 0%, rgba(255, 85, 0, 1) 62%, rgba(255, 130, 0, 1) 100%);
+		}
+		.start:visited {
+			background: linear-gradient(180deg, rgba(255,113,0,1) 0%, rgba(255,115,0,1) 62%, rgba(255,158,0,1) 100%);;
+		}
+		.start-shadow {
+			margin-top: -25px;
+			background: rgb(255,113,0,1);
+			box-shadow: 0px 3px 2px #4444443b;
+			border-bottom: 0;
+		}
+		.bubble {
+			background-color: red;
+			border-radius: 50%;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="score">Score: 20</div>
+	<div id="canvas"></div>
+	<div id="btn-start-shadow" class="start start-shadow"></div>
+	<button id="btn-start" class="start" >Start</button>
+	<!-- https://cssgradient.io/ -->
+<script src="index.js"></script>
+</body>
+</html>

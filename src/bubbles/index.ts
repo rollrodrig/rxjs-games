@@ -17,12 +17,15 @@ import {
 	first,
 } from 'rxjs/operators';
 import Settings from './settings';
+import Bubble from './bubble';
+import BubblesManager from './BubblesManager';
 
 const settings: Settings = new Settings();
 settings.init();
 settings.listenResize();
 
-
+const bubbleManager: BubblesManager = new BubblesManager(settings);
+bubbleManager.createBubble()
 
 // const bubbleSize = 40;
 // const canvasWidth = window.innerWidth;

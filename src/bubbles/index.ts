@@ -18,14 +18,38 @@ import {
 } from 'rxjs/operators';
 import Settings from './settings';
 import Bubble from './bubble';
-import BubblesManager from './BubblesManager';
+import BubblesManager from './bubbles-manager';
+import { createStore } from 'redux'
+import Game from './game';
 
 const settings: Settings = new Settings();
 settings.init();
 settings.listenResize();
 
 const bubbleManager: BubblesManager = new BubblesManager(settings);
-bubbleManager.createBubble()
+bubbleManager.createBubble();
+
+const game: Game = new Game()
+game.init();
+
+// function counter(state = 0, action: any) {
+// 	switch (action.type) {
+// 	  case 'INCREMENT':
+// 		return state + 1
+// 	  case 'DECREMENT':
+// 		return state - 1
+// 	  default:
+// 		return state
+// 	}
+// }
+// let store = createStore(counter)
+// store.subscribe(() => console.log(store.getState()))
+// store.dispatch({ type: 'INCREMENT' })
+// // 1
+// store.dispatch({ type: 'INCREMENT' })
+// // 2
+// store.dispatch({ type: 'DECREMENT' })
+// 1
 
 // const bubbleSize = 40;
 // const canvasWidth = window.innerWidth;

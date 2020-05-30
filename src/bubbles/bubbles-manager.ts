@@ -10,7 +10,7 @@ class BubblesManager {
 	createBubble() {
 		const bubble: Bubble = new Bubble(this.settings);
 		bubble.create()
-		this.bubbles.push(bubble)
+		// this.bubbles.push(bubble)
 	}
 }
 export default BubblesManager;
